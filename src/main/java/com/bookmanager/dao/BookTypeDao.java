@@ -38,11 +38,11 @@ public class BookTypeDao {
      * @throws Exception    无结果
      */
     public ResultSet list(Connection connection, BookType bookType)throws Exception{
-        StringBuffer stringBuffer=new StringBuffer("SELECT * FROM t_bookType");
+        StringBuffer stringBuffer = new StringBuffer("SELECT * FROM t_bookType");
         if(StringUtil.isNotEmpty(bookType.getBookTypeName())){
             stringBuffer.append(" and bookTypeName like '%"+bookType.getBookTypeName()+"%'");
         }
-        PreparedStatement pstmt=connection.prepareStatement(stringBuffer.toString().replaceFirst("and", "where"));
+        PreparedStatement pstmt = connection.prepareStatement(stringBuffer.toString().replaceFirst("and", "where"));
         return pstmt.executeQuery();
     }
 
@@ -55,8 +55,8 @@ public class BookTypeDao {
      * @throws Exception
      */
     public int delete(Connection connection,String id)throws Exception{
-        String sql="DELETE FROM t_bookType WHERE id=?";
-        PreparedStatement pstmt=connection.prepareStatement(sql);
+        String sql = "DELETE FROM t_bookType WHERE id = ?";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, id);
         return pstmt.executeUpdate();
     }
@@ -71,7 +71,7 @@ public class BookTypeDao {
      */
     public int update(Connection connection,BookType bookType)throws Exception{
         String sql="UPDATE t_bookType SET bookTypeName = ?, bookTypeDesc = ? WHERE id = ?";
-        PreparedStatement pstmt=connection.prepareStatement(sql);
+        PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, bookType.getBookTypeName());
         pstmt.setString(2, bookType.getBookTypeDesc());
         pstmt.setInt(3, bookType.getId());

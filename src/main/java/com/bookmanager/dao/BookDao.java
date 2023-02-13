@@ -23,8 +23,8 @@ public class BookDao {
      * @throws Exception
      */
     public int add(Connection connection, Book book)throws Exception{
-        String sql="INSERT INTO t_book VALUES (null,?,?,?,?,?,?)";
-        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        String sql = "INSERT INTO t_book VALUES (null, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, book.getBookName());
         preparedStatement.setString(2, book.getAuthor());
         preparedStatement.setString(3, book.getSex());
@@ -42,17 +42,17 @@ public class BookDao {
      * @throws Exception
      */
     public ResultSet list(Connection connection, Book book)throws Exception{
-        StringBuffer stringBuffer=new StringBuffer("SELECT * FROM t_book b,t_bookType bt WHERE b.bookTypeId=bt.id");
+        StringBuffer stringBuffer = new StringBuffer("SELECT * FROM t_book b,t_bookType bt WHERE b.bookTypeId = bt.id");
         if(StringUtil.isNotEmpty(book.getBookName())){
             stringBuffer.append(" and b.bookName like '%"+book.getBookName()+"%'");
         }
         if(StringUtil.isNotEmpty(book.getAuthor())){
             stringBuffer.append(" and b.author like '%"+book.getAuthor()+"%'");
         }
-        if(book.getBookTypeId()!=null && book.getBookTypeId()!=-1){
+        if(book.getBookTypeId() != null && book.getBookTypeId()!=-1){
             stringBuffer.append(" and b.bookTypeId="+book.getBookTypeId());
         }
-        PreparedStatement preparedStatement=connection.prepareStatement(stringBuffer.toString());
+        PreparedStatement preparedStatement = connection.prepareStatement(stringBuffer.toString());
         return preparedStatement.executeQuery();
     }
 
@@ -65,8 +65,8 @@ public class BookDao {
      * @throws Exception
      */
     public int delete(Connection connection,String id)throws Exception{
-        String sql="DELETE FROM t_book WHERE id=?";
-        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        String sql="DELETE FROM t_book WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, id);
         return preparedStatement.executeUpdate();
     }
@@ -78,9 +78,9 @@ public class BookDao {
      * @return
      * @throws Exception
      */
-    public int update(Connection connection,Book book)throws Exception{
-        String sql="UPDATE t_book SET bookName=?,author=?,sex=?,price=?,bookDesc=?,bookTypeId=? WHERE id=?";
-        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+    public int update(Connection connection,Book book) throws Exception{
+        String sql="UPDATE t_book SET bookName = ?, author = ?, sex = ?, price = ?, bookDesc = ?, bookTypeId = ? WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, book.getBookName());
         preparedStatement.setString(2, book.getAuthor());
         preparedStatement.setString(3, book.getSex());
@@ -94,28 +94,11 @@ public class BookDao {
 
 
     public boolean existBookByBookTypeId(Connection connection,String bookTypeId)throws Exception{
-        String sql="SELECT * FROM t_book WHERE bookTypeId=?";
-        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        String sql="SELECT * FROM t_book WHERE bookTypeId = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, bookTypeId);
-        ResultSet rs=preparedStatement.executeQuery();
+        ResultSet rs = preparedStatement.executeQuery();
         return rs.next();
     }
 
 }
-
-
-
-/*
-package com.bookmanager.dao;
-
-/**
- * BookDao
- *
- * @author MaxBrooks chentingxian195467@163.com
- * @version 2023/2/13 18:08
- * @since JDK17
-
-
-public class BookDao {
-}
-*/

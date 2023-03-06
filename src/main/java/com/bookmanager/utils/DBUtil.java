@@ -12,13 +12,21 @@ import java.sql.DriverManager;
  */
 public class DBUtil {
 
-    //数据库
+    /**
+     数据库
+     */
     private String url = "jdbc:mysql://localhost:3306/sys";
-    //用户名
+    /**
+     * 用户名
+     */
     private String username = "root";
-    //密码
-    private String password = "Yuhuangtao111";
-    //驱动名称
+    /**
+     * 密码
+     */
+    private String password = "Shangxiao111";
+    /**
+     * 驱动名称
+     */
     private String jdbcName = "com.mysql.cj.jdbc.Driver";
 
     /**
@@ -47,13 +55,3 @@ public class DBUtil {
 
 
 
-/*package com.bookmanager.utils;
-
-/**
- * @author MaxBrooks chentingxian195467@163.com
- * @version 2023/2/13 18:12
- * @since JDK17
- *
-
-public class DBUtil {
-}*/

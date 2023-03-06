@@ -17,11 +17,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class BookType {
-    // 编号
+    /**
+     * 编号
+     */
     private int id;
-    // 图书类别名称
+    /**
+     * 图书类别名称
+     */
     private String bookTypeName;
-    // 描述
+    /**
+     * 描述
+     */
     private String bookTypeDesc;
 
     public BookType(String bookTypeName, String bookTypeDesc) {

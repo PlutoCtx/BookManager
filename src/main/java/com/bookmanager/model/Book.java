@@ -50,7 +50,6 @@ public class Book {
      */
     private String bookDesc;
 
-
     public Book(String bookName, String author, String sex, Float price, Integer bookTypeId, String bookDesc) {
         super();
         this.bookName = bookName;
@@ -60,9 +59,6 @@ public class Book {
         this.bookTypeId = bookTypeId;
         this.bookDesc = bookDesc;
     }
-
-
-
 
     public Book(int id, String bookName, String author, String sex, Float price, Integer bookTypeId, String bookDesc) {
         super();

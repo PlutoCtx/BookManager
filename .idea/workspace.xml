@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d46b851-be5e-4ee8-9a8a-1e7f6453312b" name="Changes" comment="some detail change">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/dao/BookTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/dao/BookTypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a4d485fb62862e0748b556e99f97d19523f20fd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/model/BookType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/utils/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/utils/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookAddInterFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookAddInterFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookManageInterFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookManageInterFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookTypeAddInterFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookTypeAddInterFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookTypeManageInterFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookTypeManageInterFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/LogOnFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/LogOnFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +58,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,6 +66,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ProgramingCodes\IntelliJIDEAProjects\JavaCodes\java\BookManager\src\main\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LogOnFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bookmanager.view.LogOnFrame" />
+      <module name="BookManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookmanager.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LogOnFrame" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +95,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676282022255</updated>
-      <workItem from="1676282023823" duration="3381000" />
+      <workItem from="1676282023823" duration="3525000" />
+      <workItem from="1676420704142" duration="4292000" />
+      <workItem from="1676479368302" duration="2510000" />
+      <workItem from="1676524898825" duration="182000" />
+      <workItem from="1676560100669" duration="2171000" />
+      <workItem from="1676596130389" duration="695000" />
+      <workItem from="1676620593848" duration="638000" />
+      <workItem from="1677499635197" duration="26000" />
+      <workItem from="1677947066388" duration="369000" />
+      <workItem from="1678087907066" duration="6604000" />
     </task>
     <task id="LOCAL-00001" summary="java book manager,a simple book management system rely on pure java language,using mysql to be its database and java-swing as its view.In short,it's a simple and easy one">
       <created>1676282364522</created>
@@ -85,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676285500877</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="some detail change">
+      <created>1676285609792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676285609792</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

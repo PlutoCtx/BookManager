@@ -72,7 +72,7 @@ public class BookDao {
     }
 
     /**
-     *  更新书籍
+     * 更新书籍
      * @param connection    连接数据库
      * @param book  书籍
      * @return
@@ -92,7 +92,13 @@ public class BookDao {
     }
 
 
-
+    /**
+     * 判断书籍是否存在
+     * @param connection    数据库连接
+     * @param bookTypeId    书类号
+     * @return  存在与否
+     * @throws Exception    异常多了什么都有可能
+     */
     public boolean existBookByBookTypeId(Connection connection,String bookTypeId)throws Exception{
         String sql="SELECT * FROM t_book WHERE bookTypeId = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);

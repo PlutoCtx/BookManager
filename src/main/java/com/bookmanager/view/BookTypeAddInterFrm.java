@@ -39,22 +39,6 @@ public class BookTypeAddInterFrm extends JInternalFrame {
     private DBUtil dbUtil=new DBUtil();
     private BookTypeDao bookTypeDao=new BookTypeDao();
 
-//    /**
-//     * Launch the application.
-//     */
-//    public static void main(String[] args) {
-//        EventQueue.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    BookTypeAddInterFrm frame = new BookTypeAddInterFrm();
-//                    frame.setVisible(true);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
 
     /**
      * Create the frame.

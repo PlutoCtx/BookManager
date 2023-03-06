@@ -35,22 +35,6 @@ public class BookTypeManageInterFrm extends JInternalFrame {
     private JTextField idTxt;
     private JTextField bookTypeNameTxt;
 
-    /**
-     * Launch the application.
-     */
-//    public static void main(String[] args) {
-//        EventQueue.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    BookTypeManageInterFrm frame = new BookTypeManageInterFrm();
-//                    frame.setVisible(true);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
 
     /**
      * Create the frame.
@@ -75,7 +59,7 @@ public class BookTypeManageInterFrm extends JInternalFrame {
                 bookTypeSearchActionPerformed(e);
             }
         });
-//        button.setIcon(new ImageIcon(BookTypeManageInterFrm.class.getResource("/images/search.png")));
+        button.setIcon(new ImageIcon(BookTypeManageInterFrm.class.getResource("/images/search.png")));
 
         JPanel panel = new JPanel();
         panel.setBorder(new TitledBorder(null, "\u8868\u5355\u64CD\u4F5C", TitledBorder.LEADING, TitledBorder.TOP, null, null));

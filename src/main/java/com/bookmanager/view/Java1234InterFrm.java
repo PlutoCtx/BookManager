@@ -14,23 +14,6 @@ import java.awt.*;
 
 public class Java1234InterFrm extends JInternalFrame {
 
-//    /**
-//     * Launch the application.
-//     */
-//    public static void main(String[] args) {
-//        EventQueue.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Java1234InterFrm frame = new Java1234InterFrm();
-//                    frame.setVisible(true);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
-
     /**
      * 内部窗体
      */
@@ -42,7 +25,7 @@ public class Java1234InterFrm extends JInternalFrame {
         setBounds(100, 100, 450, 300);
 
         JLabel lblNewLabel = new JLabel("");
-//        lblNewLabel.setIcon(new ImageIcon(Java1234InterFrm.class.getResource("/images/java1234.png")));
+
         GroupLayout groupLayout = new GroupLayout(getContentPane());
         groupLayout.setHorizontalGroup(
                 groupLayout.createParallelGroup(Alignment.LEADING)

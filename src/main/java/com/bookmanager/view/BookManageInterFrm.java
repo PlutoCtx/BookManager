@@ -45,23 +45,6 @@ public class BookManageInterFrm extends JInternalFrame {
     private JTextField authorTxt;
 
     /**
-     * Launch the application.
-     */
-//    public static void main(String[] args) {
-//        EventQueue.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    BookManageInterFrm frame = new BookManageInterFrm();
-//                    frame.setVisible(true);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
-
-    /**
      * Create the frame.
      */
     public BookManageInterFrm() {
@@ -132,7 +115,6 @@ public class BookManageInterFrm extends JInternalFrame {
                 bookUpdateActionPerformed(evt);
             }
         });
-//        button_1.setIcon(new ImageIcon(BookManageInterFrm.class.getResource("/images/modify.png")));
 
         JButton button_2 = new JButton("\u5220\u9664");
         button_2.addActionListener(new ActionListener() {
@@ -141,7 +123,7 @@ public class BookManageInterFrm extends JInternalFrame {
                 bookDeleteActionPerformed(evt);
             }
         });
-//        button_2.setIcon(new ImageIcon(BookManageInterFrm.class.getResource("/images/delete.png")));
+
         GroupLayout gl_panel_1 = new GroupLayout(panel_1);
         gl_panel_1.setHorizontalGroup(
                 gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -245,7 +227,7 @@ public class BookManageInterFrm extends JInternalFrame {
                 bookSearchActionPerformed(e);
             }
         });
-//        button.setIcon(new ImageIcon(BookManageInterFrm.class.getResource("/images/search.png")));
+
         GroupLayout gl_panel = new GroupLayout(panel);
         gl_panel.setHorizontalGroup(
                 gl_panel.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -394,9 +376,9 @@ public class BookManageInterFrm extends JInternalFrame {
 
         String sex="";
         if(manJrb.isSelected()){
-            sex="  ";
+            sex="男";
         }else if(femaleJrb.isSelected()){
-            sex="Ů";
+            sex="女";
         }
 
         BookType bookType=(BookType) bookTypeJcb.getSelectedItem();

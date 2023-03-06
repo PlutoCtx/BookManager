@@ -56,7 +56,7 @@ public class LogOnFrame extends JFrame {
     public LogOnFrame(){
         //改变系统默认字体
         Font font = new Font("Dialog", Font.PLAIN, 12);
-        //java.util.Enumeration keys = UIManager.getDefaults().keys();
+        // java.util.Enumeration keys = UIManager.getDefaults().keys();
         Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()){
             Object key = keys.nextElement();
@@ -111,45 +111,45 @@ public class LogOnFrame extends JFrame {
 
         GroupLayout groupLayoutContentPane = new GroupLayout(contentPane);
         groupLayoutContentPane.setHorizontalGroup(
-                groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+            groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayoutContentPane.createSequentialGroup()
+                    .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayoutContentPane.createSequentialGroup()
-                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(groupLayoutContentPane.createSequentialGroup()
-                                                .addGap(111)
-                                                .addComponent(lblNewLabel))
-                                        .addGroup(groupLayoutContentPane.createSequentialGroup()
-                                                .addGap(101)
-                                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
-                                                        .addComponent(lblNewLabel1)
-                                                        .addComponent(lblNewLabel2)
-                                                        .addComponent(btnNewButton1))
-                                                .addGap(32)
-                                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
-                                                        .addComponent(btnNewButton2)
-                                                        .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING, false)
-                                                                .addComponent(passwordText)
-                                                                .addComponent(userNameText, GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)))))
-                                .addContainerGap(111, Short.MAX_VALUE))
+                            .addGap(111)
+                            .addComponent(lblNewLabel))
+                        .addGroup(groupLayoutContentPane.createSequentialGroup()
+                            .addGap(101)
+                            .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+                                .addComponent(lblNewLabel1)
+                                .addComponent(lblNewLabel2)
+                                .addComponent(btnNewButton1))
+                            .addGap(32)
+                            .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+                                .addComponent(btnNewButton2)
+                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING, false)
+                                    .addComponent(passwordText)
+                                    .addComponent(userNameText, GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)))))
+                    .addContainerGap(111, Short.MAX_VALUE))
         );
         groupLayoutContentPane.setVerticalGroup(
-                groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+            groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
+                .addGroup(groupLayoutContentPane.createSequentialGroup()
+                    .addGap(30)
+                    .addComponent(lblNewLabel)
+                    .addGap(26)
+                    .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayoutContentPane.createSequentialGroup()
-                                .addGap(30)
-                                .addComponent(lblNewLabel)
-                                .addGap(26)
-                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(groupLayoutContentPane.createSequentialGroup()
-                                                .addComponent(lblNewLabel1)
-                                                .addGap(29)
-                                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.BASELINE)
-                                                        .addComponent(lblNewLabel2)
-                                                        .addComponent(passwordText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(userNameText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(36)
-                                .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(btnNewButton1)
-                                        .addComponent(btnNewButton2))
-                                .addContainerGap(60, Short.MAX_VALUE))
+                            .addComponent(lblNewLabel1)
+                            .addGap(29)
+                            .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.BASELINE)
+                                .addComponent(lblNewLabel2)
+                                .addComponent(passwordText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(userNameText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(36)
+                    .addGroup(groupLayoutContentPane.createParallelGroup(Alignment.BASELINE)
+                        .addComponent(btnNewButton1)
+                        .addComponent(btnNewButton2))
+                    .addContainerGap(60, Short.MAX_VALUE))
         );
         contentPane.setLayout(groupLayoutContentPane);
         // 居中

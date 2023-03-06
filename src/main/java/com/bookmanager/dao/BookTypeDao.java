@@ -29,7 +29,6 @@ public class BookTypeDao {
         return pstmt.executeUpdate();
     }
 
-
     /**
      * 查询某类书籍
      * @param connection    连接数据库
@@ -46,7 +45,6 @@ public class BookTypeDao {
         return pstmt.executeQuery();
     }
 
-
     /**
      *
      * @param connection 连接数据库
@@ -60,7 +58,6 @@ public class BookTypeDao {
         pstmt.setString(1, id);
         return pstmt.executeUpdate();
     }
-
 
     /**
      * 更新图书

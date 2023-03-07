@@ -39,9 +39,9 @@ public class BookQueryFrame extends JInternalFrame {
     private JTextArea bookDescTxt;
     private JComboBox bookTypeJcb ;
 
-    private DBUtil dbUtil=new DBUtil();
-    private BookTypeDao bookTypeDao=new BookTypeDao();
-    private BookDao bookDao=new BookDao();
+    private DBUtil dbUtil = new DBUtil();
+    private BookTypeDao bookTypeDao = new BookTypeDao();
+    private BookDao bookDao = new BookDao();
     private JTextField idTxt;
     private JTextField bookNameTxt;
     private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -62,7 +62,8 @@ public class BookQueryFrame extends JInternalFrame {
         // 搜索条件
         panel.setBorder(new TitledBorder(null, "\u641C\u7D22\u6761\u4EF6", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         JPanel panel1 = new JPanel();
-        // 表单操作
+
+        // 书籍详情
         panel1.setBorder(new TitledBorder(null, "\u8868\u5355\u64CD\u4F5C", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         GroupLayout groupLayout = new GroupLayout(getContentPane());
         groupLayout.setHorizontalGroup(
@@ -87,37 +88,55 @@ public class BookQueryFrame extends JInternalFrame {
                                 .addComponent(panel1, GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                                 .addContainerGap())
         );
+        // 编号：
         JLabel lblNewLabel = new JLabel("\u7F16\u53F7\uFF1A");
         idTxt = new JTextField();
         idTxt.setEditable(false);
         idTxt.setColumns(10);
 
+        // 图书名称：
         JLabel lblNewLabel1 = new JLabel("\u56FE\u4E66\u540D\u79F0\uFF1A");
         bookNameTxt = new JTextField();
+        bookNameTxt.setEditable(false);
         bookNameTxt.setColumns(10);
 
+        // 作者性别：
         JLabel label3 = new JLabel("\u4F5C\u8005\u6027\u522B\uFF1A");
+        // 男
         manJrb = new JRadioButton("\u7537");
         buttonGroup.add(manJrb);
         manJrb.setSelected(true);
+        // 女
         femaleJrb = new JRadioButton("\u5973");
         buttonGroup.add(femaleJrb);
 
+        // 价格：
         JLabel label4 = new JLabel("\u4EF7\u683C\uFF1A");
         priceTxt = new JTextField();
         priceTxt.setColumns(10);
+        priceTxt.setEditable(false);
+
+        // 图书作者：
         JLabel lblNewLabel2 = new JLabel("\u56FE\u4E66\u4F5C\u8005\uFF1A");
         authorTxt = new JTextField();
+        authorTxt.setEditable(false);
         authorTxt.setColumns(10);
 
+        // 图书类别：
         JLabel label5 = new JLabel("\u56FE\u4E66\u7C7B\u522B\uFF1A");
         bookTypeJcb = new JComboBox();
+        bookTypeJcb.setEditable(false);
+
+        // 图书描述：
         JLabel label_6 = new JLabel("\u56FE\u4E66\u63CF\u8FF0\uFF1A");
         bookDescTxt = new JTextArea();
+        bookDescTxt.setEditable(false);
 
-        JButton button_1 = new JButton("\u4FEE\u6539");
+        // 加入购物车
+        JButton button_1 = new JButton("加入购物车");
         button_1.addActionListener(this::bookUpdateActionPerformed);
 
+        // 删除
         JButton button_2 = new JButton("\u5220\u9664");
         button_2.addActionListener(this::bookDeleteActionPerformed);
 
@@ -203,27 +222,26 @@ public class BookQueryFrame extends JInternalFrame {
         );
         panel1.setLayout(gl_panel1);
 
+        // 图书名称：
         JLabel label = new JLabel("\u56FE\u4E66\u540D\u79F0\uFF1A");
 
         s_bookNameTxt = new JTextField();
         s_bookNameTxt.setColumns(10);
 
+        // 图书作者：
         JLabel label_1 = new JLabel("\u56FE\u4E66\u4F5C\u8005\uFF1A");
 
         s_authorTxt = new JTextField();
         s_authorTxt.setColumns(10);
 
+        // 图书类别：
         JLabel label_2 = new JLabel("\u56FE\u4E66\u7C7B\u522B\uFF1A");
 
         s_bookTypeJcb = new JComboBox();
 
+        // 查询
         JButton button = new JButton("\u67E5\u8BE2");
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                bookSearchActionPerformed(e);
-            }
-        });
+        button.addActionListener(this::bookSearchActionPerformed);
 
         GroupLayout gl_panel = new GroupLayout(panel);
         gl_panel.setHorizontalGroup(
@@ -272,8 +290,10 @@ public class BookQueryFrame extends JInternalFrame {
         bookTable.setModel(new DefaultTableModel(
                 new Object[][] {
                 },
+                // 编号 图书名称 图书作者 作者性别 图书价格 图书描述 图书类别
                 new String[] {
-                        "\u7F16\u53F7", "\u56FE\u4E66\u540D\u79F0", "\u56FE\u4E66\u4F5C\u8005", "\u4F5C\u8005\u6027\u522B", "\u56FE\u4E66\u4EF7\u683C", "\u56FE\u4E66\u63CF\u8FF0", "\u56FE\u4E66\u7C7B\u522B"
+                        "\u7F16\u53F7", "\u56FE\u4E66\u540D\u79F0", "\u56FE\u4E66\u4F5C\u8005",
+                        "\u4F5C\u8005\u6027\u522B", "\u56FE\u4E66\u4EF7\u683C", "\u56FE\u4E66\u63CF\u8FF0", "\u56FE\u4E66\u7C7B\u522B"
                 }
         ) {
             boolean[] columnEditables = new boolean[] {
@@ -382,15 +402,15 @@ public class BookQueryFrame extends JInternalFrame {
             con=dbUtil.getConnection();
             int addNum=bookDao.update(con, book);
             if(addNum == 1){
-                JOptionPane.showMessageDialog(null, "图书修改成功");
+                JOptionPane.showMessageDialog(null, "加入购物车成功");
                 resetValue();
                 this.fillTable(new Book());
             }else{
-                JOptionPane.showMessageDialog(null, "图书修改失败");
+                JOptionPane.showMessageDialog(null, "加入购物车失败");
             }
         }catch(Exception e){
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "图书修改失败");
+            JOptionPane.showMessageDialog(null, "加入购物车失败");
         }finally{
             try {
                 dbUtil.closeConnection(con);

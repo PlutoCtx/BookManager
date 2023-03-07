@@ -54,20 +54,23 @@ public class BookQueryFrame extends JInternalFrame {
     public BookQueryFrame() {
         setClosable(true);
         setIconifiable(true);
-        setTitle("\u56FE\u4E66\u7BA1\u7406");
+        // 图书购买界面
+        setTitle("图书购买界面");
         setBounds(100, 100, 677, 487);
         JScrollPane scrollPane = new JScrollPane();
         JPanel panel = new JPanel();
+        // 搜索条件
         panel.setBorder(new TitledBorder(null, "\u641C\u7D22\u6761\u4EF6", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-        JPanel panel_1 = new JPanel();
-        panel_1.setBorder(new TitledBorder(null, "\u8868\u5355\u64CD\u4F5C", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        JPanel panel1 = new JPanel();
+        // 表单操作
+        panel1.setBorder(new TitledBorder(null, "\u8868\u5355\u64CD\u4F5C", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         GroupLayout groupLayout = new GroupLayout(getContentPane());
         groupLayout.setHorizontalGroup(
                 groupLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(groupLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(panel_1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panel1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(GroupLayout.Alignment.LEADING, groupLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(panel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(scrollPane)))
@@ -81,7 +84,7 @@ public class BookQueryFrame extends JInternalFrame {
                                 .addGap(18)
                                 .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18)
-                                .addComponent(panel_1, GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                .addComponent(panel1, GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                                 .addContainerGap())
         );
         JLabel lblNewLabel = new JLabel("\u7F16\u53F7\uFF1A");
@@ -89,21 +92,21 @@ public class BookQueryFrame extends JInternalFrame {
         idTxt.setEditable(false);
         idTxt.setColumns(10);
 
-        JLabel lblNewLabel_1 = new JLabel("\u56FE\u4E66\u540D\u79F0\uFF1A");
+        JLabel lblNewLabel1 = new JLabel("\u56FE\u4E66\u540D\u79F0\uFF1A");
         bookNameTxt = new JTextField();
         bookNameTxt.setColumns(10);
 
-        JLabel label_3 = new JLabel("\u4F5C\u8005\u6027\u522B\uFF1A");
+        JLabel label3 = new JLabel("\u4F5C\u8005\u6027\u522B\uFF1A");
         manJrb = new JRadioButton("\u7537");
         buttonGroup.add(manJrb);
         manJrb.setSelected(true);
         femaleJrb = new JRadioButton("\u5973");
         buttonGroup.add(femaleJrb);
 
-        JLabel label_4 = new JLabel("\u4EF7\u683C\uFF1A");
+        JLabel label4 = new JLabel("\u4EF7\u683C\uFF1A");
         priceTxt = new JTextField();
         priceTxt.setColumns(10);
-        JLabel lblNewLabel_2 = new JLabel("\u56FE\u4E66\u4F5C\u8005\uFF1A");
+        JLabel lblNewLabel2 = new JLabel("\u56FE\u4E66\u4F5C\u8005\uFF1A");
         authorTxt = new JTextField();
         authorTxt.setColumns(10);
 
@@ -118,87 +121,87 @@ public class BookQueryFrame extends JInternalFrame {
         JButton button_2 = new JButton("\u5220\u9664");
         button_2.addActionListener(this::bookDeleteActionPerformed);
 
-        GroupLayout gl_panel_1 = new GroupLayout(panel_1);
-        gl_panel_1.setHorizontalGroup(
-                gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(gl_panel_1.createSequentialGroup()
+        GroupLayout gl_panel1 = new GroupLayout(panel1);
+        gl_panel1.setHorizontalGroup(
+                gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(gl_panel1.createSequentialGroup()
                                 .addGap(19)
-                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addGroup(gl_panel_1.createSequentialGroup()
+                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(gl_panel1.createSequentialGroup()
                                                 .addComponent(button_1)
                                                 .addGap(18)
                                                 .addComponent(button_2)
                                                 .addGap(386))
-                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                                        .addGroup(gl_panel_1.createSequentialGroup()
+                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addGroup(gl_panel1.createSequentialGroup()
                                                                 .addComponent(label_6)
                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                                                 .addComponent(bookDescTxt))
-                                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                                                .addComponent(label_4)
+                                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                                                .addComponent(label4)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(priceTxt))
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
                                                                                 .addComponent(lblNewLabel)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(idTxt, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)))
                                                                 .addGap(26)
-                                                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                                                .addComponent(lblNewLabel_1)
+                                                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                                                .addComponent(lblNewLabel1)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                                                .addComponent(lblNewLabel_2)
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                                                .addComponent(lblNewLabel2)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(authorTxt)))
                                                                 .addGap(26)
-                                                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
-                                                                                .addComponent(label_3)
+                                                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
+                                                                                .addComponent(label3)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                 .addComponent(manJrb)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(femaleJrb))
-                                                                        .addGroup(gl_panel_1.createSequentialGroup()
+                                                                        .addGroup(gl_panel1.createSequentialGroup()
                                                                                 .addComponent(label5)
                                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                 .addComponent(bookTypeJcb, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                                                 .addContainerGap(86, Short.MAX_VALUE))))
         );
-        gl_panel_1.setVerticalGroup(
-                gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(gl_panel_1.createSequentialGroup()
+        gl_panel1.setVerticalGroup(
+                gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(gl_panel1.createSequentialGroup()
                                 .addGap(21)
-                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(lblNewLabel)
                                         .addComponent(idTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblNewLabel_1)
+                                        .addComponent(lblNewLabel1)
                                         .addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(label_3)
+                                        .addComponent(label3)
                                         .addComponent(manJrb)
                                         .addComponent(femaleJrb))
                                 .addGap(18)
-                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_4)
+                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(label4)
                                         .addComponent(priceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblNewLabel_2)
+                                        .addComponent(lblNewLabel2)
                                         .addComponent(authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(label5)
                                         .addComponent(bookTypeJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18)
-                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addComponent(label_6)
                                         .addComponent(bookDescTxt, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                                .addGroup(gl_panel_1.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addGroup(gl_panel1.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(button_1)
                                         .addComponent(button_2)))
         );
-        panel_1.setLayout(gl_panel_1);
+        panel1.setLayout(gl_panel1);
 
         JLabel label = new JLabel("\u56FE\u4E66\u540D\u79F0\uFF1A");
 
@@ -293,15 +296,12 @@ public class BookQueryFrame extends JInternalFrame {
     }
 
 
-
-
-
     /**
      * 图书删除事件处理
      * @param evt
      */
     private void bookDeleteActionPerformed(ActionEvent evt) {
-        String id=idTxt.getText();
+        String id = idTxt.getText();
         if(StringUtil.isEmpty(id)){
             JOptionPane.showMessageDialog(null, "请选择要删除的记录");
             return;
@@ -332,9 +332,6 @@ public class BookQueryFrame extends JInternalFrame {
             }
         }
     }
-
-
-
 
 
     /**

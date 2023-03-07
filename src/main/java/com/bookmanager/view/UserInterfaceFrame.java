@@ -39,30 +39,33 @@ public class UserInterfaceFrame extends JFrame {
         mnNewMenu.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/base.png"))));
         menuBar.add(mnNewMenu);
 
-        // 图书购买
-        JMenu mnNewMenu1 = new JMenu("图书购买");
+        // 图书购买相关
+        JMenu mnNewMenu1 = new JMenu("图书购买相关");
         mnNewMenu1.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/bookTypeManager.png"))));
         mnNewMenu.add(mnNewMenu1);
 
-        // 购书记录
-        JMenuItem menuItem = new JMenuItem("购书记录");
+        // 购书操作
+        JMenuItem menuItem = new JMenuItem("购书操作");
         menuItem.addActionListener(e -> {
-            BookTypeAddInterFrm bookTypeAddInterFrm = new BookTypeAddInterFrm();
-            bookTypeAddInterFrm.setVisible(true);
-            table.add(bookTypeAddInterFrm);
+            BookQueryFrame bookQueryFrame = new BookQueryFrame();
+            bookQueryFrame.setVisible(true);
+            table.add(bookQueryFrame);
+//            BookTypeAddInterFrm bookTypeAddInterFrm = new BookTypeAddInterFrm();
+//            bookTypeAddInterFrm.setVisible(true);
+//            table.add(bookTypeAddInterFrm);
         });
         menuItem.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/add.png"))));
         mnNewMenu1.add(menuItem);
 
-//        // 图书类别维护
-//        JMenuItem menuItem1 = new JMenuItem("\u56FE\u4E66\u7C7B\u522B\u7EF4\u62A4");
-//        menuItem1.addActionListener(e -> {
-//            BookTypeManageInterFrm bookTypeManageInterFrm=new BookTypeManageInterFrm();
-//            bookTypeManageInterFrm.setVisible(true);
-//            table.add(bookTypeManageInterFrm);
-//        });
-//        menuItem1.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edit.png"))));
-//        mnNewMenu1.add(menuItem1);
+        // 购书记录
+        JMenuItem menuItem1 = new JMenuItem("购书记录");
+        menuItem1.addActionListener(e -> {
+            BookTypeManageInterFrm bookTypeManageInterFrm=new BookTypeManageInterFrm();
+            bookTypeManageInterFrm.setVisible(true);
+            table.add(bookTypeManageInterFrm);
+        });
+        menuItem1.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edit.png"))));
+        mnNewMenu1.add(menuItem1);
 //
 //        // 图书管理
 //        JMenu mnNewMenu2 = new JMenu("\u56FE\u4E66\u7BA1\u7406");

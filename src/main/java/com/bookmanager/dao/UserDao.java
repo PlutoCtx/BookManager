@@ -5,6 +5,7 @@ import com.bookmanager.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.logging.Logger;
 
 /**
  * 用户Dao层
@@ -19,16 +20,16 @@ public class UserDao {
      * 登录验证
      * @param connection    数据库链接
      * @param user  用户
-     * @return
-     * @throws Exception
+     * @return  查询到的用户
+     * @throws Exception    exception
      */
     public User login(Connection connection, User user) throws Exception{
         User resultUser = null;
         String sql = "SELECT * FROM t_user where userName = ? and password = ?";
-        PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.setString(1, user.getUserName());
-        pstmt.setString(2, user.getPassword());
-        ResultSet resultSet = pstmt.executeQuery();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user.getUserName());
+        preparedStatement.setString(2, user.getPassword());
+        ResultSet resultSet = preparedStatement.executeQuery();
 
         if (resultSet.next()){
             resultUser = new User();
@@ -38,4 +39,29 @@ public class UserDao {
         }
         return resultUser;
     }
+
+    /**
+     * 判断用户是否为管理员
+     * @param connection    数据库连接
+     * @param user  用户对象
+     * @return  是否为管理员，若不是则为普通用户
+     * @throws Exception    你猜
+     */
+    public boolean isAdmin(Connection connection, User user) throws Exception{
+        boolean result = false;
+        String sql = "SELECT * FROM t_user where userName = ? and password = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user.getUserName());
+        preparedStatement.setString(2, user.getPassword());
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()) {
+            result = resultSet.getBoolean("isAdmin");
+            Logger.getGlobal().info(String.valueOf(result));
+        }
+
+        return result;
+
+    }
+
 }

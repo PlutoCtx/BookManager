@@ -10,7 +10,6 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -59,7 +58,6 @@ public class BookTypeManageInterFrm extends JInternalFrame {
                 bookTypeSearchActionPerformed(e);
             }
         });
-        button.setIcon(new ImageIcon(BookTypeManageInterFrm.class.getResource("/images/search.png")));
 
         JPanel panel = new JPanel();
         panel.setBorder(new TitledBorder(null, "\u8868\u5355\u64CD\u4F5C", TitledBorder.LEADING, TitledBorder.TOP, null, null));

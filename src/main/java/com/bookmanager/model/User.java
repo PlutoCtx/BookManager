@@ -21,6 +21,8 @@ public class User {
     private String userName;
     private String password;
 
+    private boolean isAdmin;
+
     public User(String userName, String password) {
         super();
         this.userName = userName;

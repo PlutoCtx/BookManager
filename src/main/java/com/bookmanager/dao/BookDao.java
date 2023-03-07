@@ -56,7 +56,6 @@ public class BookDao {
         return preparedStatement.executeQuery();
     }
 
-
     /**
      * 删除书籍
      * @param connection    连接数据库

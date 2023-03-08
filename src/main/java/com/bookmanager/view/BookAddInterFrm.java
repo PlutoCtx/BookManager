@@ -82,7 +82,6 @@ public class BookAddInterFrm extends JInternalFrame {
                 bookAddActionPerformed(e);
             }
         });
-//        button.setIcon(new ImageIcon(BookAddInterFrm.class.getResource("/images/add.png")));
 
         JButton button1 = new JButton("\u91CD\u7F6E");
         button1.addActionListener(new ActionListener() {
@@ -91,7 +90,7 @@ public class BookAddInterFrm extends JInternalFrame {
                 resetValueActionPerformed(e);
             }
         });
-//        button1.setIcon(new ImageIcon(BookAddInterFrm.class.getResource("/images/reset.png")));
+
         GroupLayout groupLayout = new GroupLayout(getContentPane());
         groupLayout.setHorizontalGroup(
             groupLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -190,8 +189,8 @@ public class BookAddInterFrm extends JInternalFrame {
      * @param evt
      */
     private void bookAddActionPerformed(ActionEvent evt) {
-        String bookName= this.bookNameTxt.getText();
-        String author=this.authorTxt.getText();
+        String bookName = this.bookNameTxt.getText();
+        String author = this.authorTxt.getText();
         String price=this.priceTxt.getText();
         String bookDesc=this.bookDescTxt.getText();
 

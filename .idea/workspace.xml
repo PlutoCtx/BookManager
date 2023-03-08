@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d46b851-be5e-4ee8-9a8a-1e7f6453312b" name="Changes" comment="some detail change">
+    <list default="true" id="0d46b851-be5e-4ee8-9a8a-1e7f6453312b" name="Changes" comment="menubar completed">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookQueryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookQueryFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/model/BookType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookAddInterFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookmanager/view/BookAddInterFrm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +108,7 @@
       <workItem from="1677947066388" duration="369000" />
       <workItem from="1678087907066" duration="6604000" />
       <workItem from="1678146723528" duration="8326000" />
+      <workItem from="1678267425534" duration="1167000" />
     </task>
     <task id="LOCAL-00001" summary="java book manager,a simple book management system rely on pure java language,using mysql to be its database and java-swing as its view.In short,it's a simple and easy one">
       <created>1676282364522</created>
@@ -135,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676285609792</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="menubar completed">
+      <created>1678206335010</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678206335010</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +166,8 @@
     <MESSAGE value="java book manager,a simple book management system rely on pure java language,using mysql to be its database and java-swing as its view.In short,it's a simple and easy one" />
     <MESSAGE value="class files" />
     <MESSAGE value="some detail change" />
-    <option name="LAST_COMMIT_MESSAGE" value="some detail change" />
+    <MESSAGE value="menubar completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="menubar completed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
